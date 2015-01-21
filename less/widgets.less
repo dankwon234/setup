@@ -1,0 +1,309 @@
+/*-----------------------------------------------------------------------------------
+
+    widgets.less
+
+-----------------------------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+    Widgets
+-----------------------------------------------------------------*/
+
+.widget {
+    position: relative;
+    margin-top: 50px;
+    &:first-child {
+        margin-top: 0;
+    }
+    & > h4 {
+        margin-bottom: 25px;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+    p {
+        font-size: 14px;
+    }
+}
+
+.sidebar-widgets-wrap {
+    .widget {
+        padding-top: 50px;
+        border-top: 1px solid #EEE;
+        &:first-child {
+            padding-top: 0;
+            border-top: 0;
+        }
+        & > h4 {
+            letter-spacing: 1px;
+        }
+    }
+}
+
+/* Tag Cloud
+-----------------------------------------------------------------*/
+
+.tagcloud {
+    margin-bottom: -2px;
+    a {
+        display: block;
+        float: left;
+        margin-right: 4px;
+        margin-bottom: 4px;
+        padding: 3px 6px;
+        border: 1px solid #E5E5E5;
+        font-size: 13px !important;
+        color: #666;
+        .border-radius(2px);
+        &:hover {
+            border-color: @theme-color !important;
+            color: @theme-color !important;
+        }
+    }
+}
+
+body {
+    &:not(.device-touch) {
+        .tagcloud {
+            a {
+                -webkit-transition: all .3s ease-in-out;
+                -o-transition: all .3s ease-in-out;
+                transition: all .3s ease-in-out;
+            }
+        }
+    }
+}
+
+/* Widget - Links
+-----------------------------------------------------------------*/
+
+.widget_nav_menu,
+.widget_links,
+.widget_meta,
+.widget_archive,
+.widget_recent_comments,
+.widget_recent_entries,
+.widget_categories,
+.widget_pages,
+.widget_rss {
+    ul,
+    li {
+        list-style: none;
+        margin: 0;
+    }
+}
+
+.widget_nav_menu,
+.widget_links,
+.widget_meta,
+.widget_archive,
+.widget_recent_comments,
+.widget_recent_entries,
+.widget_categories,
+.widget_pages,
+.widget_rss {
+    li {
+        padding: 4px;
+    }
+}
+
+.widget_nav_menu,
+.widget_links,
+.widget_meta,
+.widget_archive,
+.widget_recent_entries,
+.widget_categories,
+.widget_pages,
+.widget_rss,
+.widget_recent_comments {
+    li {
+        a {
+            display: inline-block;
+            padding: 0 3px 0 12px;
+            background: url("images/icons/widget-link.png") left top no-repeat;
+            border: none !important;
+            color: #444;
+            font-size: 14px;
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+}
+
+.widget_recent_comments {
+    li {
+        display: block;
+        background: url("images/icons/widget-comment.png") left top no-repeat;
+        padding: 4px 0 4px 20px;
+        a {
+            display: inline;
+            padding: 0;
+            background: none !important;
+        }
+    }
+}
+
+.widget_nav_menu,
+.widget_links,
+.widget_meta,
+.widget_archive,
+.widget_recent_comments,
+.widget_recent_entries,
+.widget_categories,
+.widget_pages,
+.widget_rss {
+     > ul {
+        > li {
+            &:first-child {
+                border-top: 0 !important;
+             }
+         }
+     }
+}
+
+.widget_nav_menu,
+.widget_links,
+.widget_meta,
+.widget_archive,
+.widget_recent_comments,
+.widget_recent_entries,
+.widget_categories,
+.widget_pages,
+.widget_rss {
+     > ul {
+        margin-top: -4px !important;
+    }
+}
+
+.widget_nav_menu,
+.widget_links,
+.widget_meta,
+.widget_archive,
+.widget_recent_comments,
+.widget_recent_entries,
+.widget_categories,
+.widget_pages,
+.widget_rss {
+     ul {
+        ul {
+            margin-left: 15px;
+        }
+    }
+}
+
+
+/* Widget - Testimonial & Twitter
+-----------------------------------------------------------------*/
+
+.widget {
+    .testimonial {
+        &.no-image {
+            .testi-image {
+                display: none;
+            }
+        }
+        &.twitter-scroll {
+            .testi-image,
+            .testi-image a,
+            .testi-image img,
+            .testi-image i {
+                width: 28px;
+                height: 28px;
+            }
+            .testi-image {
+                margin-right: 10px;
+                i {
+                    background-color: #EEE;
+                    line-height: 28px;
+                    font-size: 14px;
+                    color: #888;
+                }
+            }
+        }
+        p {
+            font-size: 14px;
+        }
+        &:not(.twitter-scroll) {
+            .testi-image,
+            .testi-image a,
+            .testi-image img {
+                width: 42px;
+                height: 42px;
+            }
+        }
+    }
+}
+
+/* Widget - Quick Contact Form
+-----------------------------------------------------------------*/
+
+.quick-contact-widget {
+    .form-control,
+    .input-group,
+    .sm-form-control {
+        margin-bottom: 10px;
+    }
+    .input-group {
+        .form-control {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.quick-contact-widget form,
+#template-contactform {
+    position: relative;
+}
+
+/* Newsletter Widget
+-----------------------------------------------------------------*/
+
+.subscribe-widget {
+    h5 {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+
+
+/* Twitter Feed Widget
+-----------------------------------------------------------------*/
+
+.widget-twitter-feed {
+    li {
+        margin: 15px 0 0 0;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    small {
+        display: block;
+        margin-top: 3px;
+        a {
+            color: #999;
+        }
+    }
+}
+
+/* Small Post
+-----------------------------------------------------------------*/
+
+.widget-twitter-feed {
+    li {
+        margin: 15px 0 0 0;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+    small {
+        display: block;
+        margin-top: 3px;
+        a {
+            color: #999;
+        }
+    }
+}
+
